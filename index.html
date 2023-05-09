@@ -1,72 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Einkaufsliste</title>
-		<meta charset="utf-8">
-		<style>
-			table {
-				border-collapse: collapse;
-			}
-			th, td {
-				border: 1px solid black;
-				padding: 5px;
-			}
-			th {
-				background-color: #eee;
-			}
-			tr:nth-child(odd) {
-				background-color: #f1f1f1;
-			}
-			tr:hover {
-				background-color: #ddd;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Einkaufsliste</h1>
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Einkaufspunkte</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Jonas</td>
-					<td>0</td>
-					<td>
-						<button class="plus">+</button>
-						<button class="minus">-</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Peter</td>
-					<td>0</td>
-					<td>
-						<button class="plus">+</button>
-						<button class="minus">-</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Mama</td>
-					<td>0</td>
-					<td>
-						<button class="plus">+</button>
-						<button class="minus">-</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Papa</td>
-					<td>0</td>
-					<td>
-						<button class="plus">+</button>
-						<button class="minus">-</button>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<script src="script.js"></script>
-	</body>
+<head>
+    <title>Einkaufspunkte</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Einkaufspunkte</h1>
+    <button onclick="sortTable()">Tabelle sortieren</button>
+    <br><br>
+    <table id="myTable">
+        <tr>
+            <th>Name</th>
+            <th>Punktzahl</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Jonas</td>
+            <td><span id="jonasPunkte">0</span></td>
+            <td><button onclick="addPoints('jonasPunkte')">+</button></td>
+            <td><button onclick="subtractPoints('jonasPunkte')">-</button></td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td><span id="peterPunkte">0</span></td>
+            <td><button onclick="addPoints('peterPunkte')">+</button></td>
+            <td><button onclick="subtractPoints('peterPunkte')">-</button></td>
+        </tr>
+        <tr>
+            <td>Mama</td>
+            <td><span id="mamaPunkte">0</span></td>
+            <td><button onclick="addPoints('mamaPunkte')">+</button></td>
+            <td><button onclick="subtractPoints('mamaPunkte')">-</button></td>
+        </tr>
+        <tr>
+            <td>Papa</td>
+            <td><span id="papaPunkte">0</span></td>
+            <td><button onclick="addPoints('papaPunkte')">+</button></td>
+            <td><button onclick="subtractPoints('papaPunkte')">-</button></td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
 </html>
