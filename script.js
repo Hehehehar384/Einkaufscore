@@ -36,5 +36,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var updateButton = document.getElementById('update-button');
 updateButton.addEventListener('click', updateTable);
-
-
