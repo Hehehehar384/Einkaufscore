@@ -1,39 +1,17 @@
-// Array mit den Personen und ihren Punkten
-var personen = [
-	{ name: "Jonas", punkte: 0 },
-	{ name: "Peter", punkte: 0 },
-	{ name: "Mama", punkte: 0 },
-	{ name: "Papa", punkte: 0 }
-];
-
-// Funktion, um die Tabelle anzuzeigen
-function tabelleAnzeigen() {
-	// Tabelle auswählen
-	var tabelle = document.getElementById("einkaufsliste").getElementsByTagName('tbody')[0];
-
-	// Alle vorhandenen Zeilen aus der Tabelle entfernen
-	while (tabelle.firstChild) {
-		tabelle.removeChild(tabelle.firstChild);
-	}
-
-	// Personen nach Punktzahl sortieren
-	personen.sort(function(a, b) {
-		return b.punkte - a.punkte;
+function sortTable() {
+	var table = document.querySelector('table');
+	var tbody = table.querySelector('tbody');
+	var rows = Array.from(tbody.querySelectorAll('tr'));
+	rows.sort(function(a, b) {
+		var aPoints = parseInt(a.cells[1].textContent);
+		var bPoints = parseInt(b.cells[1].textContent);
+		return bPoints - aPoints;
 	});
+	rows.forEach(function(row) {
+		tbody.appendChild(row);
+	});
+}
 
-	// Jede Person zur Tabelle hinzufügen
-	for (var i = 0; i < personen.length; i++) {
-		var person = personen[i];
-
-		var zeile = document.createElement("tr");
-		var nameSpalte = document.createElement("td");
-		var punkteSpalte = document.createElement("td");
-
-		nameSpalte.textContent = person.name;
-		punkteSpalte.textContent = person.punkte;
-		punkteSpalte.id = person.name + "Points";
-
-		zeile.appendChild(nameSpalte);
-		zeile.appendChild(punkteSpalte);
-
-		tabelle.appendChild
+function increasePoints(row) {
+	var pointsCell = row.cells[1];
+	var
