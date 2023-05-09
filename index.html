@@ -3,48 +3,68 @@
 <head>
 	<title>Meine Tabelle</title>
 	<script src="script.js"></script>
+	<style>
+		th, td {
+			padding: 10px;
+			text-align: left;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
 </head>
 <body>
 
+	<h1>Meine Tabelle</h1>
+
 	<table>
-		<tr>
-			<th>Name</th>
-			<th>Einkaufspunkte</th>
-			<th>Aktionen</th>
-		</tr>
-		<tr>
-			<td>Jonas</td>
-			<td>0</td>
-			<td>
-				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-			</td>
-		</tr>
-		<tr>
-			<td>Peter</td>
-			<td>0</td>
-			<td>
-				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-			</td>
-		</tr>
-		<tr>
-			<td>Mama</td>
-			<td>0</td>
-			<td>
-				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-			</td>
-		</tr>
-		<tr>
-			<td>Papa</td>
-			<td>0</td>
-			<td>
-				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-			</td>
-		</tr>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Einkaufspunkte</th>
+				<th>Aktionen</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jonas</td>
+				<td>0</td>
+				<td>
+					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td>0</td>
+				<td>
+					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Mama</td>
+				<td>0</td>
+				<td>
+					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Papa</td>
+				<td>0</td>
+				<td>
+					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 
 </body>
 </html>
+
