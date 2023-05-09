@@ -1,70 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Meine Tabelle</title>
-	<script src="script.js"></script>
-	<style>
-		th, td {
-			padding: 10px;
-			text-align: left;
-		}
-		th {
-			background-color: #4CAF50;
-			color: white;
-		}
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
-	</style>
-</head>
-<body>
-
-	<h1>Meine Tabelle</h1>
-
-	<table>
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Einkaufspunkte</th>
-				<th>Aktionen</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Jonas</td>
-				<td>0</td>
-				<td>
-					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-				</td>
-			</tr>
-			<tr>
-				<td>Peter</td>
-				<td>0</td>
-				<td>
-					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-				</td>
-			</tr>
-			<tr>
-				<td>Mama</td>
-				<td>0</td>
-				<td>
-					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-				</td>
-			</tr>
-			<tr>
-				<td>Papa</td>
-				<td>0</td>
-				<td>
-					<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
-					<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-</body>
+	<head>
+		<title>Einkaufsliste</title>
+		<meta charset="utf-8">
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+			th, td {
+				border: 1px solid black;
+				padding: 5px;
+			}
+			th {
+				background-color: #eee;
+			}
+			tr:nth-child(odd) {
+				background-color: #f1f1f1;
+			}
+			tr:hover {
+				background-color: #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Einkaufsliste</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Einkaufspunkte</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Jonas</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Peter</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Mama</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Papa</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		<button id="update-button">Tabelle aktualisieren</button>
+		<script src="script.js"></script>
+	</body>
 </html>
+
 
