@@ -25,4 +25,15 @@ function tabelleAnzeigen() {
 	for (var i = 0; i < personen.length; i++) {
 		var person = personen[i];
 
-		var ze
+		var zeile = document.createElement("tr");
+		var nameSpalte = document.createElement("td");
+		var punkteSpalte = document.createElement("td");
+
+		nameSpalte.textContent = person.name;
+		punkteSpalte.textContent = person.punkte;
+		punkteSpalte.id = person.name + "Points";
+
+		zeile.appendChild(nameSpalte);
+		zeile.appendChild(punkteSpalte);
+
+		tabelle.appendChild
