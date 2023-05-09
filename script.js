@@ -1,35 +1,28 @@
-function addPoints(spanId) {
-  const span = document.getElementById(spanId);
-  let points = parseInt(span.textContent);
-  points++;
-  span.textContent = points;
-  sortTable();
-}
+// Array mit den Personen und ihren Punkten
+var personen = [
+	{ name: "Jonas", punkte: 0 },
+	{ name: "Peter", punkte: 0 },
+	{ name: "Mama", punkte: 0 },
+	{ name: "Papa", punkte: 0 }
+];
 
-function subtractPoints(spanId) {
-  const span = document.getElementById(spanId);
-  let points = parseInt(span.textContent);
-  points--;
-  span.textContent = points;
-  sortTable();
-}
+// Funktion, um die Tabelle anzuzeigen
+function tabelleAnzeigen() {
+	// Tabelle auswählen
+	var tabelle = document.getElementById("einkaufsliste").getElementsByTagName('tbody')[0];
 
-function sortTable() {
-  const table = document.getElementById("myTable");
-  let switching = true;
-  while (switching) {
-    switching = false;
-    const rows = table.rows;
-    for (let i = 1; i < rows.length - 1; i++) {
-      let shouldSwitch = false;
-      const firstCell = rows[i].getElementsByTagName("td")[1];
-      const secondCell = rows[i + 1].getElementsByTagName("td")[1];
-      const firstPoints = parseInt(firstCell.textContent);
-      const secondPoints = parseInt(secondCell.textContent);
-      if (firstPoints < secondPoints) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i +
+	// Alle vorhandenen Zeilen aus der Tabelle entfernen
+	while (tabelle.firstChild) {
+		tabelle.removeChild(tabelle.firstChild);
+	}
+
+	// Personen nach Punktzahl sortieren
+	personen.sort(function(a, b) {
+		return b.punkte - a.punkte;
+	});
+
+	// Jede Person zur Tabelle hinzufügen
+	for (var i = 0; i < personen.length; i++) {
+		var person = personen[i];
+
+		var ze
