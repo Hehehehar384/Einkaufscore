@@ -1,66 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Einkaufsliste</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-		th, td {
-			text-align: left;
-			padding: 8px;
-			border-bottom: 1px solid #ddd;
-		}
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
-		th {
-			background-color: #4CAF50;
-			color: white;
-		}
-	</style>
+	<title>Einkaufsliste</title>
+	<script src="einkaufsliste.js"></script>
 </head>
-<body>
+<body onload="tabelleAnzeigen()">
 	<h1>Einkaufsliste</h1>
 	<table id="einkaufsliste">
 		<thead>
 			<tr>
 				<th>Name</th>
-				<th>Punktzahl</th>
-				<th></th>
+				<th>Punkte</th>
 				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td>Jonas</td>
-				<td id="punkte-jonas">0</td>
-				<td><button id="btn-plus-jonas">+</button></td>
-				<td><button id="btn-minus-jonas">-</button></td>
+				<td id="JonasPoints">0</td>
+				<td>
+					<button onclick="addPoints('Jonas')">+</button>
+					<button onclick="subPoints('Jonas')">-</button>
+				</td>
 			</tr>
 			<tr>
 				<td>Peter</td>
-				<td id="punkte-peter">0</td>
-				<td><button id="btn-plus-peter">+</button></td>
-				<td><button id="btn-minus-peter">-</button></td>
-			 </tr>
+				<td id="PeterPoints">0</td>
+				<td>
+					<button onclick="addPoints('Peter')">+</button>
+					<button onclick="subPoints('Peter')">-</button>
+				</td>
+			</tr>
 			<tr>
 				<td>Mama</td>
-				<td id="punkte-mama">0</td>
-				<td><button id="btn-plus-mama">+</button></td>
-				<td><button id="btn-minus-mama">-</button></td>
+				<td id="MamaPoints">0</td>
+				<td>
+					<button onclick="addPoints('Mama')">+</button>
+					<button onclick="subPoints('Mama')">-</button>
+				</td>
 			</tr>
 			<tr>
 				<td>Papa</td>
-				<td id="punkte-papa">0</td>
-				<td><button id="btn-plus-papa">+</button></td>
-				<td><button id="btn-minus-papa">-</button></td>
+				<td id="PapaPoints">0</td>
+				<td>
+					<button onclick="addPoints('Papa')">+</button>
+					<button onclick="subPoints('Papa')">-</button>
+				</td>
 			</tr>
 		</tbody>
 	</table>
-	<script src="script.js"></script>
+	<button onclick="tabelleAnzeigen()">Tabelle aktualisieren</button>
 </body>
 </html>
