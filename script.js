@@ -20,3 +20,8 @@ function addPoints(row) {
 	row.cells[1].textContent = currentPoints + points;
 	sortTable();
 }
+
+function subtractPoints(row) {
+	var pointsInput = row.querySelector('input[type="number"]');
+	var points = parseInt(pointsInput.value);
+	var currentPoints = parseInt(row.cells[
