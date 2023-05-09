@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Einkaufspunkte</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Einkaufsliste</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+		th, td {
+			text-align: left;
+			padding: 8px;
+			border-bottom: 1px solid #ddd;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+	</style>
 </head>
 <body>
-    <h1>Einkaufspunkte</h1>
-    <button onclick="sortTable()">Tabelle sortieren</button>
-    <br><br>
-    <table id="myTable">
-        <tr>
-            <th>Name</th>
-            <th>Punktzahl</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>Jonas</td>
-            <td><span id="jonasPunkte">0</span></td>
-            <td><button onclick="addPoints('jonasPunkte')">+</button></td>
-            <td><button onclick="subtractPoints('jonasPunkte')">-</button></td>
-        </tr>
-        <tr>
-            <td>Peter</td>
-            <td><span id="peterPunkte">0</span></td>
-            <td><button onclick="addPoints('peterPunkte')">+</button></td>
-            <td><button onclick="subtractPoints('peterPunkte')">-</button></td>
-        </tr>
-        <tr>
-            <td>Mama</td>
-            <td><span id="mamaPunkte">0</span></td>
-            <td><button onclick="addPoints('mamaPunkte')">+</button></td>
-            <td><button onclick="subtractPoints('mamaPunkte')">-</button></td>
-        </tr>
-        <tr>
-            <td>Papa</td>
-            <td><span id="papaPunkte">0</span></td>
-            <td><button onclick="addPoints('papaPunkte')">+</button></td>
-            <td><button onclick="subtractPoints('papaPunkte')">-</button></td>
-        </tr>
-    </table>
-    <script src="script.js"></script>
+	<h1>Einkaufsliste</h1>
+	<table id="einkaufsliste">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Punktzahl</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jonas</td>
+				<td id="punkte-jonas">0</td>
+				<td><button id="btn-plus-jonas">+</button></td>
+				<td><button id="btn-minus-jonas">-</button></td>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td id="punkte-peter">0</td>
+				<td><button id="btn-plus-peter">+</button></td>
+				<td><button id="btn-minus-peter">-</button></td>
+			 </tr>
+			<tr>
+				<td>Mama</td>
+				<td id="punkte-mama">0</td>
+				<td><button id="btn-plus-mama">+</button></td>
+				<td><button id="btn-minus-mama">-</button></td>
+			</tr>
+			<tr>
+				<td>Papa</td>
+				<td id="punkte-papa">0</td>
+				<td><button id="btn-plus-papa">+</button></td>
+				<td><button id="btn-minus-papa">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<script src="script.js"></script>
 </body>
 </html>
