@@ -2,6 +2,21 @@
 <html>
 <head>
 	<title>Meine Tabelle</title>
+	<script>
+		function increasePoints(row) {
+			var pointsCell = row.cells[1];
+			var points = parseInt(pointsCell.textContent);
+			pointsCell.textContent = points + 1;
+		}
+
+		function decreasePoints(row) {
+			var pointsCell = row.cells[1];
+			var points = parseInt(pointsCell.textContent);
+			if (points > 0) {
+				pointsCell.textContent = points - 1;
+			}
+		}
+	</script>
 </head>
 <body>
 
@@ -9,25 +24,43 @@
 		<tr>
 			<th>Name</th>
 			<th>Einkaufspunkte</th>
+			<th>Aktionen</th>
 		</tr>
 		<tr>
 			<td>Jonas</td>
 			<td>0</td>
+			<td>
+				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+			</td>
 		</tr>
 		<tr>
 			<td>Peter</td>
 			<td>0</td>
+			<td>
+				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+			</td>
 		</tr>
 		<tr>
 			<td>Mama</td>
 			<td>0</td>
+			<td>
+				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+			</td>
 		</tr>
 		<tr>
 			<td>Papa</td>
 			<td>0</td>
+			<td>
+				<button onclick="increasePoints(this.parentNode.parentNode)">+</button>
+				<button onclick="decreasePoints(this.parentNode.parentNode)">-</button>
+			</td>
 		</tr>
 	</table>
 
 </body>
 </html>
+
 
