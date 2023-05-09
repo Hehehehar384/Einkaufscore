@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <title>Einkaufspunkte</title>
-  <script src="script.js"></script>
+	<title>Meine Tabelle</title>
+	<script src="script.js"></script>
 </head>
-
 <body>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Einkaufspunkte</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Jonas</td>
-        <td>0</td>
-        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
-      </tr>
-      <tr>
-        <td>Peter</td>
-        <td>0</td>
-        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
-      </tr>
-      <tr>
-        <td>Mama</td>
-        <td>0</td>
-        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
-      </tr>
-      <tr>
-        <td>Papa</td>
-        <td>0</td>
-        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
-      </tr>
-    </tbody>
-  </table>
+	<h1>Einkaufsliste</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>EinkaufsPunkte</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Jonas</td>
+				<td>0</td>
+				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button><input type="number" value="0" min="0"></td>
+			</tr>
+			<tr>
+				<td>Peter</td>
+				<td>0</td>
+				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button><input type="number" value="0" min="0"></td>
+			</tr>
+			<tr>
+				<td>Mama</td>
+				<td>0</td>
+				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button><input type="number" value="0" min="0"></td>
+			</tr>
+			<tr>
+				<td>Papa</td>
+				<td>0</td>
+				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button><input type="number" value="0" min="0"></td>
+			</tr>
+		</tbody>
+	</table>
+	<button onclick="savePoints()">Speichern</button>
+	<form id="saveForm" style="display: none;" action="/save" method="POST">
+		<input id="jonasPoints" type="hidden" name="jonasPoints" value="0">
+		<input id="peterPoints" type="hidden" name="peterPoints" value="0">
+		<input id="mamaPoints" type="hidden" name="mamaPoints" value="0">
+		<input id="papaPoints" type="hidden" name="papaPoints" value="0">
+	</form>
 </body>
-
 </html>
