@@ -1,69 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Einkaufsliste</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		table, th, td {
-		  border: 1px solid black;
-		  border-collapse: collapse;
-		}
-		th, td {
-		  padding: 10px;
-		  text-align: left;
-		}
-		th {
-		  background-color: #D5DBDB;
-		}
-		tr:nth-child(even) {
-		  background-color: #F2F3F4;
-		}
-		input[type=number] {
-		  width: 80px;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <title>Einkaufspunkte</title>
+  <script src="script.js"></script>
 </head>
+
 <body>
-	<h1>Einkaufsliste</h1>
-	<table>
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Einkaufspunkte</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Jonas</td>
-				<td>0</td>
-				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button> <button onclick="subtractPoints(this.parentNode.parentNode)">-</button></td>
-			</tr>
-			<tr>
-				<td>Peter</td>
-				<td>0</td>
-				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button> <button onclick="subtractPoints(this.parentNode.parentNode)">-</button></td>
-			</tr>
-			<tr>
-				<td>Mama</td>
-				<td>0</td>
-				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button> <button onclick="subtractPoints(this.parentNode.parentNode)">-</button></td>
-			</tr>
-			<tr>
-				<td>Papa</td>
-				<td>0</td>
-				<td><button onclick="addPoints(this.parentNode.parentNode)">+</button> <button onclick="subtractPoints(this.parentNode.parentNode)">-</button></td>
-			</tr>
-		</tbody>
-	</table>
-	<br>
-	<label for="pointsInput">Punkte:</label>
-	<input type="number" id="pointsInput" name="pointsInput" min="1" max="100">
-	<button onclick="addCustomPoints()">Hinzufügen</button>
-	<br>
-	<br>
-	<button onclick="savePoints()">Punkte speichern</button>
-	<script src="script.js"></script>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Einkaufspunkte</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jonas</td>
+        <td>0</td>
+        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>0</td>
+        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
+      </tr>
+      <tr>
+        <td>Mama</td>
+        <td>0</td>
+        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
+      </tr>
+      <tr>
+        <td>Papa</td>
+        <td>0</td>
+        <td><button onclick="addPoints(this.parentNode.parentNode)">+</button><br><input type="number" placeholder="Punkte"></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
+
 </html>
