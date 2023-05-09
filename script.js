@@ -27,3 +27,4 @@ function decreasePoints(row) {
 		sortTable();
 	}
 }
+	
